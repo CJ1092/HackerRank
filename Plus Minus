@@ -1,0 +1,35 @@
+#!/bin/python
+
+import math
+import os
+import random
+import re
+import sys
+
+def plusMinus(arr):
+    count = 0.0
+    countn = 0.0
+    countp = 0.0
+    count0 = 0.0
+    for i in arr:
+        count = count+1
+        if i<0:
+            countn = countn+1
+        if i>0:
+            countp = countp+1
+        if i==0:
+            count0 = count0+1
+    countn = countn/count
+    countp = countp/count
+    count0 = count0/count
+
+    print format(countp,'.6f')
+    print format(countn,'.6f')
+    print format(count0,'.6f')
+
+if __name__ == '__main__':
+    n = int(raw_input())
+
+    arr = map(int, raw_input().rstrip().split())
+
+    plusMinus(arr)
