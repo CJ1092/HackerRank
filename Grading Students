@@ -1,0 +1,40 @@
+#!/bin/python
+
+from __future__ import print_function
+
+import os
+import sys
+
+def gradingStudents(grades):
+    #
+    grade = []
+    for i in grades:
+        if i >= 38:
+            rem = (i+5)%5
+            print (rem)
+            if rem == 0:
+                i = i
+            elif (5-rem) < 3:
+                i = i + (5-rem)
+        grade.append(i)
+    return grade
+
+    #
+
+if __name__ == '__main__':
+    f = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(raw_input())
+
+    grades = []
+
+    for _ in xrange(n):
+        grades_item = int(raw_input())
+        grades.append(grades_item)
+
+    result = gradingStudents(grades)
+
+    f.write('\n'.join(map(str, result)))
+    f.write('\n')
+
+    f.close()
