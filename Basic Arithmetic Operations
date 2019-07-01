@@ -7,5 +7,7 @@ print(a+b)
 print(a-b)
 # print multiples
 print(a*b)
-# print quotient
+# print float quotient
 print(a/b)
+# print integer quotient
+print(a//b)
