@@ -1,0 +1,11 @@
+if __name__ == '__main__':
+    a = int(raw_input())
+    b = int(raw_input())
+# print sum
+print(a+b)
+# print difference
+print(a-b)
+# print multiples
+print(a*b)
+# print quotient
+print(a/b)
