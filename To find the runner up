@@ -1,0 +1,9 @@
+if __name__ == '__main__':
+    n = int(raw_input())
+    arr = map(int, raw_input().split())
+if n <= 10 and n >= 2:
+    x = max(arr)
+    while x in arr:
+        arr.remove(x)
+        runner = max(arr)
+print runner
